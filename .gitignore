@@ -1,0 +1,9 @@
+*.dSYM
+bazel*
+compile_commands.json
+.cache
+external
+/external
+/bazel-*
+/compile_commands.json
+/.cache/
