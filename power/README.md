@@ -24,5 +24,6 @@
       * Both the odd and even template will have substitution failure.
       * This will leave the compiler with only the base case partial specialisation which is
       valid as `n = 0`.
-
+* Question:
+  * The even specialisation depends on the value of `half_value` being evaluated before `value`. Is this UB?
 
