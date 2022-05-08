@@ -13,6 +13,11 @@ cc_library(
   hdrs = ["enable_if/enable_if.hpp"]
 )
 
+cc_library(
+  name = "crtp_new_handler",
+  hdrs = ["crtp_new_handler/crtp_new_handler.hpp"]
+)
+
 cc_test(
   name = "pow_test",
   size = "small",
@@ -32,4 +37,11 @@ cc_test(
   size = "small",
   srcs = ["enable_if/enable_if_test.cc"],
   deps = ["@com_google_googletest//:gtest_main", ":enable_if"]
+)
+
+cc_test(
+  name = "crtp_new_handler_test",
+  size = "small",
+  srcs = ["crtp_new_handler/crtp_new_handler_test.cc"],
+  deps = ["@com_google_googletest//:gtest_main", ":crtp_new_handler"]
 )
