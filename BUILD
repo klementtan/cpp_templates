@@ -18,6 +18,11 @@ cc_library(
   hdrs = ["crtp_new_handler/crtp_new_handler.hpp"]
 )
 
+cc_library(
+  name = "shared_ptr",
+  hdrs = ["shared_ptr/shared_ptr.hpp"]
+)
+
 cc_test(
   name = "pow_test",
   size = "small",
@@ -44,4 +49,11 @@ cc_test(
   size = "small",
   srcs = ["crtp_new_handler/crtp_new_handler_test.cc"],
   deps = ["@com_google_googletest//:gtest_main", ":crtp_new_handler"]
+)
+
+cc_test(
+  name = "shared_ptr_test",
+  size = "small",
+  srcs = ["shared_ptr/shared_ptr_test.cc"],
+  deps = ["@com_google_googletest//:gtest_main", ":shared_ptr"]
 )
